@@ -1,0 +1,42 @@
+//Write a program to find the LCM of two numbers.
+
+#include <stdio.h>
+
+int main() {
+    int a, b, lcm, max;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    max = (a > b) ? a : b;
+    lcm = max;
+
+    while (lcm % a != 0 || lcm % b != 0) {
+        lcm++;
+    }
+
+    printf("LCM = %d", lcm);
+
+    return 0;
+}
+
+//Write a program to find the sum of digits of a number.
+
+#include <stdio.h>
+
+int main() {
+    int n, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while (n != 0) {
+        digit = n % 10;
+        sum = sum + digit;
+        n = n / 10;
+    }
+
+    printf("Sum of digits = %d", sum);
+
+    return 0;
+}
